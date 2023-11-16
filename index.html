@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-100">
+
+  <main class="flex flex-col h-screen items-center justify-center">
+    <div class="w-6/12 rounded-t-[6px] rounded-bl-[6px] rounded-br-[200px] p-[50px] bg-white">
+      <section>
+        <div class="flex flex-row items-center justify-start">
+          <div class="flex flex-col p-2">
+            <label for="day" class="Poppins font-bold">DAY</label>
+            <input id="day" class="Poppins outline-none  w-32 text-2xl font-bold p-2 border-[1px] rounded-lg"
+              type="text" placeholder="DD" maxlength="2">
+            <p class="text-red-500" id="error_message_day"></p>
+          </div>
+          <div class="flex flex-col p-2">
+            <label for="month" class="Poppins font-bold">MONTH</label>
+            <input id="month" class="Poppins outline-none b w-32 text-2xl font-bold p-2 border-[1px] rounded-lg"
+              type="text" placeholder="MM" maxlength="2">
+            <p class="text-red-500" id="error_message_month"></p>
+          </div>
+          <div class="flex flex-col p-2">
+            <label for="year" class="Poppins font-bold">YEAR</label>
+            <input id="year" class="Poppins outline-none  w-32 text-2xl font-bold p-2 border-[1px] rounded-lg"
+              type="text" placeholder="YYYY" maxlength="4">
+            <p class="text-red-500" id="error_message_year"></p>
+          </div>
+        </div>
+      </section>
+      <div class="flex flex-row items-center">
+        <div class="border-b-[1px] border-solid border-gray-300 w-[89%]"></div>
+        <img id="arrow" class="p-[10px] bg-purple-600 rounded-[50%] hover:cursor-pointer" src="/assets/images/icon-arrow.svg" alt="">
+      </div>
+      <section>
+        <p class="Poppins font-bold text-8xl"><span id="output_year" class="text-purple-600">--</span>years</p>
+        <p class="Poppins font-bold text-8xl"><span id="output_month" class="text-purple-600">--</span>months</p>
+        <p class="Poppins font-bold text-8xl"><span id="output_day" class="text-purple-600">--</span>days</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="./main.js"></script>
+
+</html>
